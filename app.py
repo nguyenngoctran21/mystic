@@ -3,6 +3,10 @@ from tool import run
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return {"status": "Mystic API running"}
+
 @app.route('/api/profile', methods=['POST'])
 def profile():
     try:
